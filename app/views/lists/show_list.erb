@@ -1,0 +1,21 @@
+
+<p><%= @list.content %> </p>
+
+<form method="post" action="/lists/<%=@list.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete list">
+</form>
+
+ <form method="get" action="/lists/<%=@list.id%>/edit">
+      <button type="submit">Edit Task</button>
+  </form>
+<br></br>
+
+ <form method="get" action="/lists/new">
+      <button type="submit">New Task</button>
+  </form>
+
+  <form method="get" action='/lists'>
+      <button type="submit">All Tasks</button>
+  </form>
+    

@@ -1,0 +1,99 @@
+     * {
+          background: #D0E4F5 url("https://images.pexels.com/photos/2098427/pexels-photo-2098427.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260") no-repeat scroll 0 0;
+          }
+.clearfix:after {
+     clear: both;
+     content: " ";
+     display: block;
+     font-size: 0;
+     height: 0;
+     visibility: hidden;
+   }
+   .clearfix { display: inline-block; }
+   * html .clearfix { height: 1%; }
+   .clearfix { display: block; }
+   
+
+
+
+#main { 
+     
+     font-size: larger;
+     background-color: pink
+     margin: 0 auto;
+     width: 60%;
+     height: 75%;
+     
+     }
+
+#task_card {
+     background-color: rgb(132, 59, 201);
+     text-align: left;
+     font-family: "Lucida Console", Monaco, monospace;
+     font-size: 10px;
+     letter-spacing: -0.4px;
+     word-spacing: -0.4px;
+     color: #000000;
+     font-weight: 700;
+     text-decoration: none;
+     font-style: normal;
+     font-variant: normal;
+     text-transform: none;
+     column-width: 200px;
+     max-width: 800px;
+     margin: 0 auto;
+     padding-left: 0%;
+
+
+     
+    
+}
+
+#task_card .controlButtons {
+     {
+          position: relative;
+          float: right;
+          width: 10%; auto;
+          height: 10%, auto;
+          padding-right: 10%;
+     }
+}
+
+.myButton {
+     text-align: left;
+     color: rgb(62, 255, 245); 
+     font-size: 13px; 
+     line-height: 13px; 
+     padding: 6px; 
+     border-radius: 7px; 
+     font-family: "Lucida Console", Monaco, monospace; 
+     font-weight: 700; 
+     text-decoration: none; 
+     font-style: normal; 
+     font-variant: normal; 
+     text-transform: none; 
+     background: none ;
+     background-image: none;
+           }
+
+     h1{
+          text-align: center;
+          font-family: cursive;
+          font-size: x-large;
+          background: none;
+
+     }
+
+     h2 {
+          text-align: center;
+          font-family: 'Times New Roman', Times, serif;
+     }
+
+     #nav_bar  {
+          float: left;
+          width: 33%, auto;
+          height: 33%, auto;
+          padding-left: 10%;
+     }
+
+     #edit_delete_buttons   

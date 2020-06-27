@@ -1,0 +1,21 @@
+
+
+<h2>To Do List</h2>
+<p>Please sign in or create a new account:
+
+<nav>
+    <% if logged_in? %>
+
+    <p>Welcome, <%=current_user.username %> </p>
+    <form method="get" action='/lists'>
+      <button type="submit">My Tasks</button>
+  </form>
+ <form method="get" action='/logout'>
+      <button type="submit"> Log Out </button>
+</form>
+
+    <% else %>
+    <a href="/new">Create Account</a>
+    <a  href="/login">Sign In</a>
+    <% end %>
+</nav> 

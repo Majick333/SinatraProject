@@ -1,0 +1,6 @@
+<p> Here are your lists, <%= @user.username %>
+<% @user.lists.each do |list| %>
+  <div>
+    <%= list.content %>
+  </div>
+<% end %>

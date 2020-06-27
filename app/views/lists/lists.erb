@@ -1,0 +1,51 @@
+<head>
+    <meta charset="utf-8">
+    <title>To Do</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+
+<p> Welcome, <%= current_user.username %>
+<h2> The Big List of Tasks </h2>
+
+<div id='nav_bar'>
+
+<div class='myButton'>
+ <form method="get" action="/lists/new">
+      <button type="submit">New Task</button>
+ </form>
+  <form method="get" action='/logout'>
+      <button type="submit"> Log Out </button>
+  </form>
+  </div>
+</div>
+
+
+
+<% current_user.lists.each do |list| %>
+  <div id="task_card">
+    
+    <%= list.content %>
+  
+    <br><br>
+<div class="controlButtons">
+    <div id="myButton">
+    <form method="get" action="/lists/<%=list.id%>/edit">
+      <button type="submit">Edit Task</button>
+      </form>
+    </div>
+    
+   
+    <div id="myButton">
+      <form method="post" action="/lists/<%=list.id%>/delete">
+        <input id="hidden" type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete Task ">
+  </div>
+  </div>
+</form>
+</div>
+  </p>
+<% end %>
+
+</div>
+
