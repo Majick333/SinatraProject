@@ -19,7 +19,7 @@
 #main { 
      
      font-size: larger;
-     background-color: pink
+     background-color: pink;
      margin: 0 auto;
      width: 60%;
      height: 75%;
@@ -50,14 +50,14 @@
 }
 
 #task_card .controlButtons {
-     {
+     
           position: relative;
           float: right;
-          width: 10%; auto;
+          width: 10%; 
           height: 10%, auto;
           padding-right: 10%;
      }
-}
+
 
 .myButton {
      text-align: left;
@@ -96,4 +96,4 @@
           padding-left: 10%;
      }
 
-     #edit_delete_buttons   
+    /* #edit_delete_buttons   */
