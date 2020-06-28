@@ -1,5 +1,6 @@
      * {
-          background: #D0E4F5 url("https://images.pexels.com/photos/2098427/pexels-photo-2098427.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260") no-repeat scroll 0 0;
+          color:white;
+          background: #eef1f3 url("https://images.pexels.com/photos/2098427/pexels-photo-2098427.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260") no-repeat scroll 0 0;
           }
 .clearfix:after {
      clear: both;
@@ -19,7 +20,7 @@
 #main { 
      
      font-size: larger;
-     background-color: pink;
+     background-color: white;
      margin: 0 auto;
      width: 60%;
      height: 75%;
@@ -33,7 +34,7 @@
      font-size: 10px;
      letter-spacing: -0.4px;
      word-spacing: -0.4px;
-     color: #000000;
+     color:white;
      font-weight: 700;
      text-decoration: none;
      font-style: normal;
@@ -43,6 +44,8 @@
      max-width: 800px;
      margin: 0 auto;
      padding-left: 0%;
+     position: relative;
+     float:center;
 
 
      
@@ -52,12 +55,12 @@
 #task_card .controlButtons {
      
           position: relative;
-          float: right;
+          float: left;
           width: 10%; 
-          height: 10%, auto;
-          padding-right: 10%;
-     }
-
+          height: 10%, 
+          
+     
+}
 
 .myButton {
      text-align: left;
@@ -81,12 +84,15 @@
           font-family: cursive;
           font-size: x-large;
           background: none;
+          color:white
 
      }
 
      h2 {
           text-align: center;
           font-family: 'Times New Roman', Times, serif;
+          color: white;
+          font-size: medium;
      }
 
      #nav_bar  {
@@ -94,6 +100,8 @@
           width: 33%, auto;
           height: 33%, auto;
           padding-left: 10%;
+          color: white;
      }
 
-    /* #edit_delete_buttons   */
+     /*#edit_delete_buttons   */
+     
