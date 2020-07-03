@@ -23,7 +23,7 @@ class ListsController < ApplicationController
       redirect to "/lists/new"
     else
       @list = current_user.lists.create(content: params[:content])
-      redirect to "/lists/#{@list.id}"
+      redirect to "/lists"
     end
   end
 

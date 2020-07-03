@@ -45,7 +45,7 @@ get '/users/:slug' do
   get '/logout' do
     if logged_in?
       session.destroy
-      redirect to '/'
+      redirect to '/login'
     else
       redirect to '/lists'
     end

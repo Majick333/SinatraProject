@@ -1,51 +1,73 @@
+
+
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="public/css/bootstrap.css">
+    <link rel='stylesheet' href="public/css/bootstrap-responsive.css">
     <title>To Do</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-  </head>
-  <body>
+</head>
 
-<p> Welcome, <%= current_user.username %>
-<h2> The Big List of Tasks </h2>
 
-<div id='nav_bar'>
+<body>
 
-<div class='myButton'>
- <form method="get" action="/lists/new">
-      <button type="submit">New Task</button>
- </form>
-  <form method="get" action='/logout'>
-      <button type="submit"> Log Out </button>
-  </form>
+
+  <div class="container">
+    <div class="header clearfix">
+        <h3 class="text-muted">Sinatra Task Manager</h3>
+      </div>
+
+  <div class="jumbotron">
+
+      
+    <h1> Welcome, <%= current_user.username %></h1>
+      <h2> The Big List of Tasks </h2>
+      <nav>
+        <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/lists">Home</a></li>
+            <li role="presentation"><a href="lists/new">New Task</a></li>
+            <li role="presentation"><a href="/logout">Logout</a></li>
+          </ul>
+      </nav>
   </div>
-</div>
 
+<!--          <div class='btn btn-success'>
+            <form method="get" action="/lists/new">
+              <button type="submit">New Task</button>
+            </form>
+          </div>
+        <div class='btn btn-success'>
+          <form method="get" action='/logout'>
+            <button type="submit"> Log Out </button>
+          </form>
+        </div>
+    </div> -->
 
-
-<% current_user.lists.each do |list| %>
-  <div id="task_card">
-    
-    <%= list.content %>
   
-    <br><br>
-<div class="controlButtons">
-    <div id="myButton">
-    <form method="get" action="/lists/<%=list.id%>/edit">
-      <button type="submit">Edit Task</button>
-      </form>
-    </div>
-    
-   
-    <div id="myButton">
-      <form method="post" action="/lists/<%=list.id%>/delete">
-        <input id="hidden" type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="Delete Task ">
+
+<div class="row marketing">
+  <% current_user.lists.each do |list| %>
+  <div class="col-md-6">
+    <h3> <%= list.content %> </h3>
+      
+      <div class="btn-group">
+        <div class="btn btn-success">
+          <form method="get" action="/lists/<%=list.id%>/edit">
+            <button type="submit">Edit Task</button>
+          </form>
+        </div>
+      </div>
+                 
+      <div class="btn btn-success">
+        <form method="post" action="/lists/<%=list.id%>/delete">
+          <input id="hidden" type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Task Complete!">
+        </form>
+      </div>
   </div>
-  </div>
-</form>
 </div>
-  </p>
+  
 <% end %>
 
 </div>
 
+</div>
