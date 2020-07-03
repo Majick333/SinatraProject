@@ -1,3 +1,5 @@
-.container{
-    background-image: url('images/background.jpg');
+* {
+    background-image: url('background.jpg');
+    background-repeat: repeat-x, repeat-y;
+    
 }

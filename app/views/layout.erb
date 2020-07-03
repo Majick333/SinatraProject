@@ -1,42 +1,57 @@
 
 <!doctype html>
 <html>
-
-  <style>
-        .container{
-          width:100%;
-          height: 100%;
-          background-image: url('public/images/background.jpg');
-          background-size: 100% 100%;
-      }
-      </style>
-
-
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sinatra To Do Project</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
     <link rel="stylesheet" href="css/custom.css">
-
-    
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
-      <style>
-        .container{
-          width:100%;
-          height: 100%;
-          background-image: url('public/images/background.jpg');
-          background-size: 100% 100%;
-      }
-      </style> -->
     
     
   </head>
 
-  <body>
-    
+<body>
+  <div class="container-fluid">
+  <style>background-image: url("public/images/tactile_noise.png")</style>
+    <div class="header clearfix">
+        <h3 class="text-muted">Sinatra Task Manager</h3>
+    </div>
+      <div class="jumbotron">    
+        
+          <h2> The Big List of Tasks </h2>
+          <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="/lists">Home</a></li>
+                <li role="presentation" class="active"><a href="lists/new">New Task</a></li>
+                <li role="presentation" class="active"><a href="/logout">Logout</a></li>
+              </ul>
+          </nav>
+      </div>
+    </div>
+  
 
-          <%= yield %>  
-  </body>
+    <div class="container">  
+      <div class="container-fluid">
+              <%= yield %>  
+      </div>
+    </div>
+</body>
+<br>
+<br>
+<br>
+
+<footer class="fixed-bottom">
+  <div class="container">
+    <div class="footer">
+    
+      <h5>Project by Ryan McCauley</h5>
+        <h6>See the source code <a href="https://github.com/Majick333/SinatraProject" target="_blank">here.</a>
+    </div>
+  </div>
+
+</footer>
+
+
 </html>
