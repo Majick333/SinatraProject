@@ -11,11 +11,14 @@
 <body>
 
   <div class="container">
-   <h3> Welcome, <%= current_user.username %> here are your tasks...</h3>
+   <h2> Welcome, <%= current_user.username %></h2>
+   <br>
+   <h3>Here are your tasks...</h3>
   </div>
     
     <div class="row marketing">     
       <% current_user.lists.each do |list| %>
+      <br>
         <div class="card">
           <div class="card-body">
             <h3> <%= list.content %> </h3>     

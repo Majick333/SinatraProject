@@ -13,15 +13,15 @@
   </head>
 
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" padding=80>
   <style>background-image: url("public/images/tactile_noise.png")</style>
     <div class="header clearfix">
         <h3 class="text-muted">Sinatra Task Manager</h3>
     </div>
-      <div class="jumbotron">    
+      <div class="jumbotron jumbotron-fluid">   
         
           <h2> The Big List of Tasks </h2>
-          <nav>
+          <nav class="navbar navbar-dark bg-dark">
             <ul class="nav nav-pills pull-right">
                 <li role="presentation" class="active"><a href="/lists">Home</a></li>
                 <li role="presentation" class="active"><a href="lists/new">New Task</a></li>
@@ -42,15 +42,13 @@
 <br>
 <br>
 
-<footer class="fixed-bottom">
-  <div class="container">
-    <div class="footer">
-    
-      <h5>Project by Ryan McCauley</h5>
-        <h6>See the source code <a href="https://github.com/Majick333/SinatraProject" target="_blank">here.</a>
-    </div>
+<footer class="footer">
+  <div class="container sticky-bottom">
+    <span class="text-muted">
+      <h5><strong>Project by Ryan McCauley</strong></h5>
+        <h6>GitHub Repo <a href="https://github.com/Majick333/SinatraProject" target="_blank">here.</a>
+    </span>
   </div>
-
 </footer>
 
 
