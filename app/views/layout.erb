@@ -12,44 +12,59 @@
     
   </head>
 
-<body>
-  <div class="container-fluid" padding=80>
-  <style>background-image: url("public/images/tactile_noise.png")</style>
-    <div class="header clearfix">
-        <h3 class="text-muted">Sinatra Task Manager</h3>
-    </div>
-      <div class="jumbotron jumbotron-fluid">   
-        
-          <h2> The Big List of Tasks </h2>
-          <nav class="navbar navbar-dark bg-dark">
-            <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="active"><a href="/lists">Home</a></li>
-                <li role="presentation" class="active"><a href="lists/new">New Task</a></li>
-                <li role="presentation" class="active"><a href="/logout">Logout</a></li>
-              </ul>
-          </nav>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid bg-dark">
+        <nav class="navbar navbar-fixed-top">    
+          <div class="header clearfix">
+              <h3 class="text-muted">Sinatra Task Manager</h3>      
+                <h2> Your List of Tasks </h2>
+                  <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="/lists">Home</a></li>
+                    <li role="presentation" class="active"><a href="/lists/new">New Task</a></li>
+                    <li role="presentation" class="active"><a href="/logout">Logout</a></li>
+                  </ul>
+                </div>
+          </div>
+        </nav>
+        </nav>
       </div>
     </div>
-  
 
-    <div class="container">  
-      <div class="container-fluid">
-              <%= yield %>  
-      </div>
-    </div>
-</body>
+
+      
+        <div class="container-fluid" >
+        <style>
+          body {
+            padding-top:100px
+            }         
+            /* fix padding under menu after resize */
+            @media screen and (max-width: 767px) {
+                body { padding-top: 60px; }
+            }
+            @media screen and (min-width:768px) and (max-width: 991px) {
+                body { padding-top: 110px; }
+            }
+            @media screen and (min-width: 992px) {
+                body { padding-top: 60px; }
+            }
+        </style>
+                <%= yield %>  
+        </div>
+  </body>
 <br>
 <br>
 <br>
 
-<footer class="footer">
-  <div class="container sticky-bottom">
-    <span class="text-muted">
-      <h5><strong>Project by Ryan McCauley</strong></h5>
-        <h6>GitHub Repo <a href="https://github.com/Majick333/SinatraProject" target="_blank">here.</a>
-    </span>
-  </div>
+<div class="container sticky-bottom">
+  <footer class="footer">    
+     <span class="text-muted">
+        <h5><strong>Project by Ryan McCauley</strong></h5>
+         <h6>GitHub Repo <a href="https://github.com/Majick333/SinatraProject" target="_blank">here.</a>
+     </span>
 </footer>
+</div>
 
 
 </html>
