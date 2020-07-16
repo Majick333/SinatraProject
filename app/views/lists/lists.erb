@@ -17,11 +17,11 @@
   </div>
     
     <div class="row marketing">     
-      <% current_user.lists.each do |list| %>
+     <h3> <% current_user.lists.each do |list| %> </h3>
       <br>
         <div class="card">
           <div class="card-body">
-            <h3> <%= list.content %> </h3>     
+            <h4> <%= list.content %> </h4>     
                 <div class="btn-group" role='group'>
                   <div class="btn btn-link">
                     <form method="get" action="/lists/<%=list.id%>/edit">

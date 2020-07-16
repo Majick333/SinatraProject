@@ -56,7 +56,7 @@ class ListsController < ApplicationController
       @list = List.find_by_id(params[:id])
       @list.content = params[:content]
       @list.save
-      redirect to "/lists/#{@list.id}"
+      redirect to "/lists"
     end
   end
 
